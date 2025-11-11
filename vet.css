@@ -81,7 +81,7 @@
         /* --- Pet Card Styling (Used across Home and Find Pets) --- */
         .pet-card img {
             width: 100%;
-            height: 350px;
+            height: 300px;
             object-fit: cover;
         }
         .availability {
