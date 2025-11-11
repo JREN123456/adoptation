@@ -1,0 +1,41 @@
+/* Custom gradient for buttons */
+.auth-button-gradient {
+    background: linear-gradient(180deg, #D29A5B 0%, #8F5B3A 100%);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(175, 110, 50, 0.4);
+}
+.auth-button-gradient:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 8px rgba(175, 110, 50, 0.6);
+}
+
+/* Input focus styles */
+.auth-input:focus {
+    border-color: #D29A5B;
+    box-shadow: 0 0 0 1px #D29A5B;
+}
+
+/* Fix for date input alignment */
+input[type="date"] {
+    appearance: none;
+    line-height: normal;
+}
+
+/* Tabs */
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    color: #6B7280;
+    transition: all 0.2s;
+    flex-grow: 1;
+    text-align: center;
+}
+.tab-button:hover:not(.active-tab) {
+    color: #9CA3AF;
+}
+.active-tab {
+    border-color: #D29A5B;
+    color: #8F5B3A;
+    font-weight: 700;
+}
