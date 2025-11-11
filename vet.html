@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PawConnect - Every Pet Deserves a Loving Home</title>
+    <title>God's Home of Refuge - Every Pet Deserves a Loving Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- We'll use a single <style> block for custom, non-Tailwind styling and variables -->
     <link rel="stylesheet" href="vet.css">
@@ -17,7 +17,7 @@
 
     <!-- 1. Header/Navigation Bar (Always visible) -->
     <header class="navbar flex justify-between items-center px-6 py-3 shadow-md bg-white sticky top-0 z-10">
-        <div class="logo font-extrabold text-xl" style="color: var(--secondary-color);">🐾 E&A<span style="color: var(--primary-color);"> Veterinary </span></div>
+        <div class="logo font-extrabold text-xl" style="color: var(--secondary-color);">🐾 God's <span style="color: var(--primary-color);"> Home of Refuge </span></div>
         <nav class="flex space-x-6 text-sm">
             <a href="#" class="nav-link" data-target="home-page" onclick="navigate('home-page')">Home</a>
             <a href="#" class="nav-link" data-target="about-page" onclick="navigate('about-page')">About</a>
@@ -112,7 +112,7 @@
                         const featuredContainer = document.querySelector('.featured-pets .pet-cards-container');
                         if (featuredContainer) {
                             // Render only the first 3 pets for featured section
-                            featuredContainer.innerHTML = PETS_DATA.slice(0, 3).map(createPetCardHTML).join('');
+                            featuredContainer.innerHTML = PETS_DATA.slice(0, 4).map(createPetCardHTML).join('');
                         }
                     });
                 </script>
@@ -125,7 +125,7 @@
     <!-- ============================================== -->
     <section id="about-page" data-page class="py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl font-extrabold mb-3 rounded-lg" style="color: var(--secondary-color);">About PawConnect</h1>
+            <h1 class="text-4xl font-extrabold mb-3 rounded-lg" style="color: var(--secondary-color);">About God's Home of Refuge</h1>
             <p class="text-lg text-gray-600 mb-12">We are dedicated to creating lasting bonds between pets and families through compassionate care and innovative technology.</p>
 
             <!-- Mission Statement and Image - Image is now on the right for large screens -->
@@ -495,31 +495,29 @@
     <footer class="mt-12 text-white" style="background-color: var(--secondary-color);">
         <div class="footer-content max-w-6xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
             <div class="footer-logo">
-                <h3 class="text-xl font-extrabold mb-3">E and A<span style="color: var(--primary-color);"> Veterinary</span></h3>
+                <h3 class="text-xl font-extrabold mb-3">God's<span style="color: var(--primary-color);"> Home of Refuge</span></h3>
                 <p class="text-sm text-gray-300 mb-4">Connecting loving families with pets in need of a forever home.</p>
                 <div class="social-links flex space-x-3">
                     <!-- Icons for Facebook, Twitter, Instagram -->
-                    <a href="#" class="text-gray-400 hover:text-white transition">F</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">T</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">I</a>
+
+                    <a href="https://www.facebook.com/share/1CxtiGGBsx/" class="text-gray-400 hover:text-white transition" aria label="visit our facebook page"></i>facebook</a>
                 </div>
             </div>
+
             <div class="footer-links">
                 <h4 class="font-bold mb-4" style="color: var(--primary-color);">Quick Links</h4>
                 <ul class="space-y-2 text-sm text-gray-300">
                     <li><a href="#" onclick="navigate('home-page')">Home</a></li>
                     <li><a href="#" onclick="navigate('about-page')">About Us</a></li>
                     <li><a href="#" onclick="navigate('find-pets-page'); applyFilters();">Find Pets</a></li>
-                    <li>Adoption Process</li>
+                    <li><a href="#" onclick="navigate('adopt-page')">Adoption Process</a></li>
+                    <li><a href="#" onclick="navigate('health-page')">Health Records</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4 class="font-bold mb-4" style="color: var(--primary-color);">Support</h4>
                 <ul class="space-y-2 text-sm text-gray-300">
                     <li><a href="#" onclick="navigate('contact-page')">Contact Us</a></li>
-                    <li>FAQ</li>
-                    <li>Pet Care Guide</li>
-                    <li>Emergency Care</li>
                 </ul>
             </div>
             <div class="contact-info">
