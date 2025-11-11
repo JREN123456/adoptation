@@ -28,8 +28,7 @@
             <a href="#" class="nav-link" data-target="contact-page" onclick="navigate('contact-page')">Contact</a>
         </nav>
         <div class="auth-buttons space-x-2">
-            <button class="text-sm font-medium text-gray-700 hover:text-gray-900 transition">Login</button>
-            <button class="text-sm font-medium text-white px-4 py-2 rounded-full shadow-md transition hover:bg-opacity-90" style="background-color: var(--primary-color);">Get Started</button>
+            <button class="text-sm font-medium text-white px-4 py-2 rounded-full shadow-md transition hover:bg-opacity-90" style="background-color: var(--primary-color);">Login/SignUp</button>
         </div>
     </header>
 
@@ -274,7 +273,7 @@
                         <!-- Action Buttons -->
                         <div class="detail-actions flex gap-4">
                             <!-- UPDATED: Use startAdoptionProcess to navigate and pre-fill the form -->
-                            <button class="text-white shadow-lg flex-grow" style="background-color: var(--primary-color); hover:background-color: #cc8b45;" onclick="startAdoptionProcess(document.getElementById('detail-name').textContent)">
+                            <button class="text-white shadow-lg flex-grow hover:bg-opacity-90" style="background-color: var(--primary-color);" onclick="startAdoptionProcess(document.getElementById('detail-name').textContent)">
                                 Adopt <span id="adopt-pet-name">Buddy</span>
                             </button>
                             <button class="border border-gray-400 text-gray-700 hover:bg-gray-100 flex-grow" onclick="alert('Contacting shelter for more information.')">

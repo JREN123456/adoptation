@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Auth Form</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-brown': {
+                            start: '#B47F41',
+                            end: '#8F6433',
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom gradient button */
+        .btn-primary-gradient {
+            background-image: linear-gradient(to top, #8F6433, #B47F41);
+            color: white;
+            transition: all 0.2s;
+        }
+        .btn-primary-gradient:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                        0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input styling */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            outline: none;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: border-color 0.15s ease-in-out;
+        }
+        .form-input:focus {
+            border-color: #9F6D41;
+        }
+
+        /* Checkbox styling */
+        .form-checkbox {
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #9ca3af;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .form-checkbox:checked {
+            border-color: #9F6D41;
+            background-color: #9F6D41;
+        }
+        .form-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0.3rem;
+            height: 0.6rem;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: translate(-50%, -60%) rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4 font-sans">
+
+    <!-- Floating Auth Card -->
+    <div id="auth-card" class="bg-white w-full max-w-md mx-auto p-6 md:p-8 rounded-xl shadow-2xl transition-all duration-300 ease-in-out">
+
+        <!-- LOGIN VIEW -->
+        <div id="login-view">
+            <header class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Login</h2>
+                <button class="text-gray-400 hover:text-gray-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+                         viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" 
+                              stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </header>
+
+            <form onsubmit="event.preventDefault(); alertMessage('Login attempted!', 'Login')">
+                <div class="space-y-4">
+                    <div>
+                        <label for="login-email" class="block font-semibold text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="login-email" name="email" placeholder="Enter your email" required class="form-input">
+                    </div>
+
+                    <div>
+                        <label for="login-password" class="block font-semibold text-gray-700 mb-2">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required class="form-input">
+                    </div>
+
+                    <div class="flex items-center justify-between mt-4">
+                        <label class="flex items-center text-gray-600 cursor-pointer text-sm">
+                            <input type="checkbox" name="remember" class="form-checkbox">
+                            Remember me
+                        </label>
+                        <a href="#" class="text-sm font-medium text-amber-700 hover:text-amber-800 transition" 
+                           onclick="alertMessage('Forgot password link clicked!')">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="w-full mt-6 py-3 rounded-xl btn-primary-gradient text-lg font-bold shadow-md hover:shadow-lg transition">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+            <p class="text-center mt-6 text-gray-600 text-sm">
+                Don't have an account?
+                <a href="#" class="font-bold text-amber-700 hover:text-amber-800 transition" onclick="toggleView('signup')">Sign up</a>
+            </p>
+        </div>
+
+        <!-- SIGNUP VIEW -->
+        <div id="signup-view" class="hidden">
+            <header class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Create Account</h2>
+                <button class="text-gray-400 hover:text-gray-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+                         viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" 
+                              stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </header>
+
+            <form onsubmit="event.preventDefault(); alertMessage('Account creation attempted!', 'Create Account')">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-semibold text-gray-700 mb-2">First Name</label>
+                            <input type="text" placeholder="First name" required class="form-input">
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-gray-700 mb-2">Last Name</label>
+                            <input type="text" placeholder="Last name" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-gray-700 mb-2">Email Address</label>
+                        <input type="email" placeholder="Enter your email" required class="form-input">
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-gray-700 mb-2">Password</label>
+                        <input type="password" placeholder="Create a password" required class="form-input">
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-gray-700 mb-2">Confirm Password</label>
+                        <input type="password" placeholder="Confirm your password" required class="form-input">
+                    </div>
+
+                    <div class="pt-2">
+                        <label class="flex items-start text-gray-600 cursor-pointer text-sm">
+                            <input type="checkbox" required class="form-checkbox mt-1">
+                            <span class="ml-1">
+                                I agree to the 
+                                <a href="#" class="font-bold text-amber-700 hover:text-amber-800 transition" onclick="alertMessage('Terms of Service link clicked!')">Terms of Service</a> 
+                                and 
+                                <a href="#" class="font-bold text-amber-700 hover:text-amber-800 transition" onclick="alertMessage('Privacy Policy link clicked!')">Privacy Policy</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="w-full mt-6 py-3 rounded-xl btn-primary-gradient text-lg font-bold shadow-md hover:shadow-lg transition">
+                        Create Account
+                    </button>
+                </div>
+            </form>
+
+            <p class="text-center mt-6 text-gray-600 text-sm">
+                Already have an account?
+                <a href="#" class="font-bold text-amber-700 hover:text-amber-800 transition" onclick="toggleView('login')">Login</a>
+            </p>
+        </div>
+
+        <!-- Custom Alert -->
+        <div id="alert-box" class="fixed top-0 left-1/2 -translate-x-1/2 p-3 text-sm rounded-lg shadow-xl text-white hidden z-50 transition-all duration-300 transform" 
+             style="opacity: 0; transform: translate(-50%, -100%);">
+            <span id="alert-message"></span>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleView(viewName) {
+            const loginView = document.getElementById('login-view');
+            const signupView = document.getElementById('signup-view');
+
+            loginView.classList.add('hidden');
+            signupView.classList.add('hidden');
+
+            if (viewName === 'login') loginView.classList.remove('hidden');
+            else signupView.classList.remove('hidden');
+        }
+
+        function alertMessage(message, type = 'Info') {
+            const alertBox = document.getElementById('alert-box');
+            const alertMessageSpan = document.getElementById('alert-message');
+            
+            alertMessageSpan.textContent = `${type}: ${message}`;
+
+            let color = 'bg-blue-500';
+            if (type === 'Login' || type === 'Create Account') color = 'bg-green-600';
+            if (type === 'Error') color = 'bg-red-500';
+            
+            alertBox.className = `fixed top-0 left-1/2 -translate-x-1/2 p-3 text-sm rounded-lg shadow-xl text-white z-50 transition-all duration-300 transform ${color}`;
+            alertBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                alertBox.style.opacity = 1;
+                alertBox.style.transform = 'translate(-50%, 1rem)';
+            }, 50);
+
+            setTimeout(() => {
+                alertBox.style.opacity = 0;
+                alertBox.style.transform = 'translate(-50%, -100%)';
+                setTimeout(() => alertBox.classList.add('hidden'), 300);
+            }, 3000);
+        }
+
+        window.onload = () => toggleView('login');
+    </script>
+
+</body>
+</html>
