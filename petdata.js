@@ -72,6 +72,79 @@
                         { date: '2024-03-01', record: 'Routine wellness check for exotic pet. Teeth and digestion good.', category: 'Checkup' }
                     ]
                 }
+            },
+            { 
+                id: 'Bully', name: 'Bully', type: 'Dog', breed: 'Bulldog', age: 10, gender: 'Male', size: 'Large', energy: 'High', goodWithKids: 'Excellent', training: 'House trained', 
+                description: 'Bully is a american breed of companion dog or toy dog. It appeared in Paris in the mid-nineteenth century, apparently the result of cross-breeding of Toy Bulldogs imported from England and local Parisian ratters.', 
+                tags: ['Friendly', 'Active','Moody'], imgSrc: 'Bulldog.jpg', 
+                health: { 
+                    vaccines: 'Up to Date', lastCheckup: 'March 10, 2024', weight: '70 lbs', medications: ' Active',
+                    fullHistory: [
+                        { date: '2024-03-15', record: 'Annual Checkup. Weight stable. Heartworm prevention administered.', category: 'Checkup' },
+                        { date: '2023-11-01', record: 'Rabies booster administered.', category: 'Vaccination' },
+                        { date: '2023-09-20', record: 'Dental cleaning performed. Minor tartar removed.', category: 'Procedure' }
+                    ]
+                }
+            },
+            { 
+                id: 'Muning', name: 'Muning', type: 'Cat', breed: 'Japanese Bobtail', age: 6, gender: 'Female', size: 'Small', energy: 'High', goodWithKids: 'Good', training: 'Litter trained', 
+                description: 'Japanese Bobtail is a breed of domestic cat with an unusual bobtail more closely resembling the tail of a rabbit than that of other cats.', 
+                tags: ['Calm', 'Independent', 'Playful'], imgSrc: 'Japanese bobtail.jpg',
+                health: { 
+                    vaccines: 'Needs Booster', lastCheckup: 'May 10, 2024', weight: '15 lbs', medications: 'Flea Prevention',
+                    fullHistory: [
+                        { date: '2024-01-10', record: 'Routine Checkup. Needs Feline Calicivirus booster. Started on monthly flea control.', category: 'Checkup' },
+                        { date: '2023-07-25', record: 'FVRCP vaccination administered.', category: 'Vaccination' },
+                        { date: '2022-12-05', record: 'Minor eye infection treated with topical ointment. Resolved.', category: 'Medication' }
+                    ]
+                }
+            },
+            { 
+                id: 'Whitey', name: 'Whitey', type: 'Dog', breed: 'Askal', age: 1, gender: 'Female', size: 'Medium', energy: 'High', goodWithKids: 'Good', training: 'Advanced commands', 
+                description: 'Super smart and energetic dog who loves learning new tricks and agility training.', 
+                tags: ['Smart', 'Energetic' , 'Friendly'], imgSrc: 'whitey.jpg',
+                health: { 
+                    vaccines: 'Up to Date', lastCheckup: 'April 20, 2024', weight: '45 lbs', medications: 'None Active',
+                    fullHistory: [
+                        { date: '2024-04-20', record: 'Pre-adoption physical exam. Excellent health. Fecal exam negative.', category: 'Checkup' },
+                        { date: '2023-03-05', record: 'Distemper/Parvo vaccination completed.', category: 'Vaccination' }
+                    ]
+                }
+            },
+            { 
+                id: 'Cleo', name: 'Cleo', type: 'Cat', breed: 'British Shorthair', age: 0.5, gender: 'Male', size: 'Small', energy: 'Medium', goodWithKids: 'Excellent', training: 'Litter trained', 
+                description: 'New born kitten who loves toys and exploring. Very social and enjoys attention and cuddles.', 
+                tags: ['Playful', 'Social' , 'Sleepy'], imgSrc: 'British Shorthair.jpeg',
+                health: { 
+                    vaccines: 'Kitten Shots Pending', lastCheckup: 'May 5, 2024', weight: '5 lbs', medications: 'Dewormer',
+                    fullHistory: [
+                        { date: '2024-05-05', record: 'First kitten exam. Dewormer administered. Scheduled for first FVRCP in 2 weeks.', category: 'Checkup' },
+                        { date: '2024-05-05', record: 'Initial dose of Pyrantel (Dewormer).', category: 'Medication' }
+                    ]
+                }
+            },
+            { 
+                id: 'Rusty', name: 'Rusty', type: 'Dog', breed: 'Pomeranian', age: 5, gender: 'Male', size: 'Large', energy: 'Medium', goodWithKids: 'Fair', training: 'Guard training', 
+                description: 'Pomeranian is a breed of dog of the Spitz type that is named for the Pomerania region in north-west Poland and north-east Germany in Central Europe.', 
+                tags: ['Loyal', 'Protective'], imgSrc: 'Pomeranian.jpg',
+                health: { 
+                    vaccines: 'Up to Date', lastCheckup: 'February 1, 2024', weight: '80 lbs', medications: 'Joint Supplement',
+                    fullHistory: [
+                        { date: '2024-02-01', record: 'Senior Wellness exam. Started on Glucosamine/Chondroitin for joint support.', category: 'Checkup' },
+                        { date: '2023-10-15', record: 'Annual Bordetella vaccine.', category: 'Vaccination' }
+                    ]
+                }
+            },
+            { 
+                id: 'Theo', name: 'Theo', type: 'Other', breed: 'Warbler Bird', age: 1, gender: 'Female', size: 'Small', energy: 'Low', goodWithKids: 'Fair', training: 'N/A', 
+                description: 'Gentle and quiet companion who enjoys peaceful surroundings and gentle handling.', 
+                tags: ['Gentle', 'Quiet'], imgSrc: 'Warbler.jpg',
+                health: { 
+                    vaccines: 'N/A', lastCheckup: 'March 1, 2024', weight: '4 lbs', medications: 'None Active',
+                    fullHistory: [
+                        { date: '2024-03-01', record: 'Routine wellness check for exotic pet. Teeth and digestion good.', category: 'Checkup' }
+                    ]
+                }
             }
         ];
 
