@@ -10,18 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalContainer = document.getElementById('modal-container');
     const openAuthBtn = document.getElementById('open-auth-btn');
 
-    // Simple Login validation
-function validateLogin() {
-    var username = document.getElementById("login-email").value;
-    var password = document.getElementById("login-password").value;
-
-    if (username === "jrenmasangkay@gmail.com" && password === "jren123") {
-        $.mobile.changePage("#useraccount.html"); // Go to useraccount page
-    } else {
-        alert("Invalid login! Try again.");
-    }
-}
-
     // --- Modal Functions ---
     function openModal() {
         if (modalContainer) {
